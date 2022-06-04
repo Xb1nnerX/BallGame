@@ -35,6 +35,15 @@ function animate(){
 
     lienzo.clearRect(0,0,1200,800);
     if(GameOver==false){
+        if(Contador>=10 && Contador<20){
+            lienzo.fillStyle="red";
+        }
+        else if(Contador>=20 && Contador<50){
+            lienzo.fillStyle="green";
+        }
+        else if(Contador>=50 ){
+            lienzo.fillStyle="yellow";
+        }
         if(positionY<=(790) && bajando==true && positionX>=20 && DentroX==true){
 
             lienzo.beginPath();
@@ -116,5 +125,7 @@ function animate(){
         lienzo.fillText("Game Over",420,370);
     }
 }
+
+
 
 
